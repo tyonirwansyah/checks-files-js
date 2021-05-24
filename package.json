@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "async": "^3.2.0",
-    "boxen": "^5.0.1"
+    "boxen": "^5.0.1",
+    "enquirer": "^2.3.6"
   },
   "scripts": {
     "build": "tsc",
