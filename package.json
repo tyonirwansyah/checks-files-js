@@ -1,0 +1,25 @@
+{
+  "name": "file-tester",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^15.6.0",
+    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/parser": "^4.25.0",
+    "eslint": "^7.27.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.0",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "async": "^3.2.0",
+    "boxen": "^5.0.1"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "start": "node dist/dummy/crud.js",
+    "dev": "nodemon dist/index.js"
+  }
+}
