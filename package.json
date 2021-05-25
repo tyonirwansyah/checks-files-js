@@ -1,7 +1,8 @@
 {
   "name": "file-tester",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "bin/terminal.js",
+  "description": "test js file with just a command.",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^15.6.0",
@@ -22,5 +23,8 @@
     "watch": "tsc -w",
     "start": "node dist/dummy/crud.js",
     "dev": "nodemon dist/index.js"
+  },
+  "bin": {
+    "file-testfolder": "./bin/terminal.js"
   }
 }
