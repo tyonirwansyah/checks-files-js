@@ -8,25 +8,24 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.executeBuildTest = void 0;
 const showAllFiles_1 = require("./utils/showAllFiles");
 const filterFiles_1 = require("./utils/filterFiles");
 const executeCommand_1 = require("./utils/executeCommand");
-const path_1 = __importDefault(require("path"));
-const fs_1 = __importDefault(require("fs"));
+const traverseFiles_1 = require("./utils/traverseFiles");
 function executeBuildTest(folderPath) {
     return __awaiter(this, void 0, void 0, function* () {
-        const files = fs_1.default.readdirSync(folderPath);
-        const filteredFiles = filterFiles_1.filterFiles(files);
+        const filesArray = [];
+        const fileNamesArray = [];
+        traverseFiles_1.traverseFiles(folderPath, filesArray, fileNamesArray);
+        const filteredFiles = filterFiles_1.filterFiles(fileNamesArray);
+        const filteredDirFiles = filterFiles_1.filterFiles(filesArray);
         showAllFiles_1.showAllFiles(filteredFiles);
-        for (let i = 0; i < filteredFiles.length; i++) {
+        for (let i = 0; i < filteredDirFiles.length; i++) {
             const a = () => __awaiter(this, void 0, void 0, function* () {
                 try {
-                    const result = yield executeCommand_1.executeCommand(path_1.default.join(folderPath, filteredFiles[i]), filteredFiles[i]);
+                    const result = yield executeCommand_1.executeCommand(filteredDirFiles[i], filteredFiles[i]);
                     console.log(result);
                     return "success";
                 }

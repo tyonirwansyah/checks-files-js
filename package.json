@@ -1,5 +1,5 @@
 {
-  "name": "file-tester",
+  "name": "checks-files-js",
   "version": "1.0.0",
   "main": "bin/terminal.js",
   "description": "test js files with just a command.",
