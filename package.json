@@ -23,8 +23,8 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "start": "node dist/dummy/crud.js",
-    "dev": "nodemon dist/index.js"
+    "start": "node bin/terminal.js",
+    "dev": "nodemon bin/terminal.js"
   },
   "bin": {
     "checks-files": "./bin/terminal.js"
