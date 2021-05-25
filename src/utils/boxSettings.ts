@@ -11,3 +11,9 @@ export const successBoxSettings: Options = {
   borderStyle: "double",
   borderColor: "blue",
 };
+
+export const failBoxSettings: Options = {
+  padding: 1,
+  borderStyle: "double",
+  borderColor: "red",
+};

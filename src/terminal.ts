@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import { Input } from "enquirer";
@@ -13,4 +15,4 @@ prompt
     console.log("Your output:", answer.trim());
     executeBuildTest(answer.trim());
   })
-  .catch(console.log);
+  .catch((e: Error) => console.log(e));
