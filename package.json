@@ -2,10 +2,11 @@
   "name": "file-tester",
   "version": "1.0.0",
   "main": "bin/terminal.js",
-  "description": "test js file with just a command.",
+  "description": "test js files with just a command.",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^15.6.0",
+    "@types/yargs": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.25.0",
     "@typescript-eslint/parser": "^4.25.0",
     "eslint": "^7.27.0",
@@ -16,7 +17,8 @@
   "dependencies": {
     "async": "^3.2.0",
     "boxen": "^5.0.1",
-    "enquirer": "^2.3.6"
+    "enquirer": "^2.3.6",
+    "yargs": "^17.0.1"
   },
   "scripts": {
     "build": "tsc",
@@ -25,6 +27,6 @@
     "dev": "nodemon dist/index.js"
   },
   "bin": {
-    "file-testfolder": "./bin/terminal.js"
+    "checks-files": "./bin/terminal.js"
   }
 }
