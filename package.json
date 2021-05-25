@@ -1,8 +1,9 @@
 {
   "name": "checks-files-js",
   "version": "1.0.0",
+  "author": "Tyo Nirwansyah",
   "main": "bin/terminal.js",
-  "description": "test js files with just a command.",
+  "description": "test js files with just a command 🛹",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^15.6.0",
@@ -28,5 +29,19 @@
   },
   "bin": {
     "checks-files": "./bin/terminal.js"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itstyonirwansyah/checks-files-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/itstyonirwansyah/checks-files-js/issues"
+  },
+  "homepage": "https://github.com/itstyonirwansyah/checks-files-js#readme",
+  "keywords": [
+    "cli",
+    "command",
+    "check",
+    "test"
+  ]
 }
