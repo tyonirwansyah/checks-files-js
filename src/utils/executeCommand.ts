@@ -14,10 +14,9 @@ export function executeCommand(
         console.log(boxen(failFileOutput(fileName), failBoxSettings));
         reject(error);
         return;
-      } else {
-        resolve(boxen(successFileOutput(fileName), successBoxSettings));
-        return;
       }
+      resolve(boxen(successFileOutput(fileName), successBoxSettings));
+      return;
     });
   });
 }
