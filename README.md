@@ -3,8 +3,9 @@
 A javascript cli for testing files with just one command.
 
 [![version](https://shields.io/npm/v/checks-files-js?style=flat-square&color=blue)](https://www.npmjs.com/package/checks-files-js)
-[![license](https://shields.io/npm/l/checks-files-js?style=flat-square&color=blue)](https://www.npmjs.com/package/checks-files-js)
+[![license](https://shields.io/npm/l/checks-files-js?style=flat-square&color=blue)](https://github.com/itstyonirwansyah/checks-files-js/blob/master/LICENSE)
 [![downloads](https://shields.io/npm/dm/checks-files-js?style=flat-square&color=blue)](https://www.npmjs.com/package/checks-files-js)
+[![code-quality](https://img.shields.io/codacy/grade/847ac62ab354467a95859b5df3dc4d5e?style=flat-square&color=blue)](https://app.codacy.com/gh/itstyonirwansyah/checks-files-js/dashboard?branch=master)
 
 # Install via npm
 
