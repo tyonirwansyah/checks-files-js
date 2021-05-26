@@ -17,10 +17,8 @@ function executeCommand(fileDir, fileName) {
                 reject(error);
                 return;
             }
-            else {
-                resolve(boxen_1.default(successFileOutput_1.successFileOutput(fileName), boxSettings_1.successBoxSettings));
-                return;
-            }
+            resolve(boxen_1.default(successFileOutput_1.successFileOutput(fileName), boxSettings_1.successBoxSettings));
+            return;
         });
     });
 }
