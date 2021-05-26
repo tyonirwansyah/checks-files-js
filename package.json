@@ -1,9 +1,17 @@
 {
   "name": "checks-files-js",
   "version": "1.0.0",
-  "author": "Tyo Nirwansyah",
   "main": "bin/terminal.js",
   "description": "test js files with just a command 🛹",
+  "author": {
+    "name": "Tyo Nirwansyah",
+    "email": "tyonirwansyah@gmail.com",
+    "url": "https://github.com/itstyonirwansyah"
+  },
+  "files": [
+    "bin/",
+    "LICENSE"
+  ],
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^15.6.0",
@@ -42,6 +50,7 @@
     "cli",
     "command",
     "check",
-    "test"
+    "test",
+    "files"
   ]
 }
