@@ -14,13 +14,19 @@ const showAllFiles_1 = require("./utils/showAllFiles");
 const filterFiles_1 = require("./utils/filterFiles");
 const executeCommand_1 = require("./utils/executeCommand");
 const traverseFiles_1 = require("./utils/traverseFiles");
-function executeBuildTest(folderPath) {
+const filterIgnoreFiles_1 = require("./utils/filterIgnoreFiles");
+// test command
+// node bin/terminal.js ./bin/utils --ignore main.ts
+function executeBuildTest(folderPath, _ignoreFile = null) {
     return __awaiter(this, void 0, void 0, function* () {
         const filesArray = [];
         const fileNamesArray = [];
         traverseFiles_1.traverseFiles(folderPath, filesArray, fileNamesArray);
         const filteredFiles = filterFiles_1.filterFiles(fileNamesArray);
         const filteredDirFiles = filterFiles_1.filterFiles(filesArray);
+        if (_ignoreFile) {
+            filterIgnoreFiles_1.ignoreFiles(_ignoreFile, filteredDirFiles, filteredFiles);
+        }
         showAllFiles_1.showAllFiles(filteredFiles);
         for (let i = 0; i < filteredDirFiles.length; i++) {
             const a = () => __awaiter(this, void 0, void 0, function* () {

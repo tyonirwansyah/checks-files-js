@@ -2,15 +2,26 @@ import { showAllFiles } from "./utils/showAllFiles";
 import { filterFiles } from "./utils/filterFiles";
 import { executeCommand } from "./utils/executeCommand";
 import { traverseFiles } from "./utils/traverseFiles";
+import { ignoreFiles } from "./utils/filterIgnoreFiles";
 
-export async function executeBuildTest(folderPath: string): Promise<void> {
+// test command
+
+// node bin/terminal.js ./bin/utils --ignore main.ts
+
+export async function executeBuildTest(
+  folderPath: string,
+  _ignoreFile: string[] | null = null
+): Promise<void> {
   const filesArray: string[] = [];
   const fileNamesArray: string[] = [];
 
   traverseFiles(folderPath, filesArray, fileNamesArray);
-
   const filteredFiles = filterFiles(fileNamesArray);
   const filteredDirFiles = filterFiles(filesArray);
+
+  if (_ignoreFile) {
+    ignoreFiles(_ignoreFile, filteredDirFiles, filteredFiles);
+  }
 
   showAllFiles(filteredFiles);
 

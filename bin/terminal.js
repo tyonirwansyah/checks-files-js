@@ -10,13 +10,14 @@ const enquirer_1 = require("enquirer");
 const main_1 = require("./main");
 const yargs_1 = __importDefault(require("yargs"));
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const argv = yargs_1.default.argv;
+const argv = yargs_1.default.option("ignore", { type: "array" }).argv;
 const prompt = new enquirer_1.Input({
     message: "Whats the directory folder you want to check?",
 });
 const commandInput = argv._[0];
+const ignoreInput = argv.ignore;
 if (commandInput) {
-    main_1.executeBuildTest(commandInput.trim());
+    main_1.executeBuildTest(commandInput.trim(), ignoreInput);
 }
 else {
     runPrompt();

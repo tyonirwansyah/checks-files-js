@@ -8,7 +8,7 @@ import { executeBuildTest } from "./main";
 import yargs from "yargs";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const argv: any = yargs.argv;
+const argv: any = yargs.option("ignore", { type: "array" }).argv;
 
 const prompt = new Input({
   message: "Whats the directory folder you want to check?",
@@ -16,8 +16,10 @@ const prompt = new Input({
 
 const commandInput = argv._[0];
 
+const ignoreInput = argv.ignore;
+
 if (commandInput) {
-  executeBuildTest(commandInput.trim());
+  executeBuildTest(commandInput.trim(), ignoreInput);
 } else {
   runPrompt();
 }
