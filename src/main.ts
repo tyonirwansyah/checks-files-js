@@ -4,10 +4,6 @@ import { executeCommand } from "./utils/executeCommand";
 import { traverseFiles } from "./utils/traverseFiles";
 import { ignoreFiles } from "./utils/filterIgnoreFiles";
 
-// test command
-
-// node bin/terminal.js ./bin/utils --ignore main.ts
-
 export async function executeBuildTest(
   folderPath: string,
   _ignoreFile: string[] | null = null

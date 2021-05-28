@@ -15,8 +15,6 @@ const filterFiles_1 = require("./utils/filterFiles");
 const executeCommand_1 = require("./utils/executeCommand");
 const traverseFiles_1 = require("./utils/traverseFiles");
 const filterIgnoreFiles_1 = require("./utils/filterIgnoreFiles");
-// test command
-// node bin/terminal.js ./bin/utils --ignore main.ts
 function executeBuildTest(folderPath, _ignoreFile = null) {
     return __awaiter(this, void 0, void 0, function* () {
         const filesArray = [];

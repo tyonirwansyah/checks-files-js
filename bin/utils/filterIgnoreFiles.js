@@ -15,8 +15,6 @@ exports.ignoreFiles = ignoreFiles;
 const includesIgnoreFile = (ignoredFiles, fileName) => {
     for (let i = 0; i < ignoredFiles.length; i++) {
         if (ignoredFiles[i].includes(fileName)) {
-            console.log(ignoredFiles[i]);
-            console.log("spring");
             return true;
         }
     }
