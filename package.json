@@ -1,6 +1,6 @@
 {
   "name": "checks-files-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "bin/terminal.js",
   "description": "test js files with just a command 🛹",
   "author": {
